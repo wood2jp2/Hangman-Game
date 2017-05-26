@@ -1,19 +1,7 @@
 var wins = 0;
 var losses = 0;
-var guessesLeft = 10;
-var lettersGuessed = [];
-var arrayOfPuzzles = ["bitcoin", "whatsapp", "google", "facebook", "amazon", "techcrunch", "twitter", "startup", "fullstack"]
-var puzzleChoice = arrayOfPuzzles[Math.floor(Math.random()*arrayOfPuzzles.length)];
-var solverArray = [];
 
-document.onclick = function(click) {
-	for (var solverCounter = 0; solverCounter<puzzleChoice.length; solverCounter++) {
-		if (solverArray.length < puzzleChoice.length) {
-		solverArray.push("_");
-		}
-	}
-	document.getElementById("puzzle").innerHTML = solverArray;
-}
+document.onclick = setUpPuzzle;
 
 document.onkeyup = function(event) {
 	var userGuess = event.key;
@@ -34,18 +22,15 @@ document.onkeyup = function(event) {
 			if (solverArray[k] !== "_") {
 				if (k===solverArray.length-1 && solverArray[solverArray.length-1] !== "_") {
 					alert("You win!");
+					wins++;
+
+					setUpPuzzle();
 				}
 			} else {
 				break;
 			}
 		}
-		// while (solverArray[k] !== "_") {
-		// 	k = k+1;
-		// 	if (k===solverArray.length-1 && solverArray[k] !== "_") {
-		// 			alert("You win!");
-		// 			wins++;
-		// 	}
-		// }
+
 	guessesLeft-=1;
 
 	if (guessesLeft===0) {
@@ -53,13 +38,27 @@ document.onkeyup = function(event) {
 		losses++;
 	}
 
-	// for (var iWinCounter = 0; iWinCounter < puzzleChoice.length; iWinCounter++) {
-	// 	if 
-	// }
-
 	document.getElementById("wins").innerHTML = wins;
     document.getElementById("losses").innerHTML = losses;
     document.getElementById("userGuesses").innerHTML = lettersGuessed;
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
     document.getElementById("puzzle").innerHTML = solverArray;
+}
+
+function setUpPuzzle () {
+	guessesLeft = 10;
+	lettersGuessed = [];
+	arrayOfPuzzles = ["bitcoin", "whatsapp", "google", "facebook", "amazon", "techcrunch", "twitter", "startup", "fullstack"]
+	puzzleChoice = arrayOfPuzzles[Math.floor(Math.random()*arrayOfPuzzles.length)];
+	solverArray = [];
+
+	for (var solverCounter = 0; solverCounter<puzzleChoice.length; solverCounter++) {
+		if (solverArray.length < puzzleChoice.length) {
+		solverArray.push("_");
+		}
+	}
+
+	document.getElementById("puzzle").innerHTML = solverArray;
+	document.getElementById("userGuesses").innerHTML = lettersGuessed;
+    document.getElementById("guessesLeft").innerHTML = guessesLeft;
 }
