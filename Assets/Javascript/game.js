@@ -1,7 +1,7 @@
 var wins = 0;
 var losses = 0;
 
-document.onclick = setUpPuzzle;
+document.onclick = setUpPuzzle
 
 document.onkeyup = function(event) {
 	var userGuess = event.key;
@@ -15,7 +15,7 @@ document.onkeyup = function(event) {
 				if (guessesLeft<=10) {
 				guessesLeft+=1;
 				}
-			} 
+			}
 		}
 
 		for (k; k<solverArray.length; k++) {
@@ -23,8 +23,6 @@ document.onkeyup = function(event) {
 				if (k===solverArray.length-1 && solverArray[solverArray.length-1] !== "_") {
 					alert("You win!");
 					wins++;
-
-					setUpPuzzle();
 				}
 			} else {
 				break;
