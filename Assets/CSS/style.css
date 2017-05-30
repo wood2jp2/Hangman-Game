@@ -1,6 +1,7 @@
 .jumbotron {
-	background-image: url("http://tvseriesfinale.com/wp-content/uploads/2017/04/silicon-valley-hbo-season-4-ratings-canceled-or-season-5-590x224.jpg");
-	background-size: 1300px;
+	background-image: url("http://tellmenothing.com/wp-content/uploads/2017/04/160318-news-silicon-valley.jpeg");
+	background-size: 1300px 500px;
+	background-repeat: no-repeat;
 	height: 340px;
 	text-align: center;
 }
@@ -15,4 +16,8 @@ body {
 	background-color: white;
 	margin-left: 10px;
 	height: 310px;
+}
+
+.btn {
+	background-color: #C5A5FC;
 }

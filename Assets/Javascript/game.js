@@ -30,7 +30,7 @@ document.onkeyup = function(event) {
 	guessesLeft-=1;
 
 	if (guessesLeft===0) {
-		alert("You lose! Click the start button and try again!");
+		alert("You lose! No participation trophies here. Click the start button and try again!");
 		losses++;
 	}
 
