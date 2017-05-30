@@ -3,15 +3,24 @@
 	<head>
 		<title>Hangman Game</title>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
 		<script type="text/javascript" src="Assets/Javascript/game.js"></script>
 	</head>
 	<body>
-		<div id="hangmanGame">
-			<h3>Click anywhere on the page to load your tech-themed puzzle and begin!</h3>
-			<p>Wins: <span id="wins">0</span></p>
-			<p>Losses: <span id="losses">0</span></p>
-			<p>Letters Guessed: <span id="userGuesses">0</span></p>
-			<p>Guesses Left: <span id="guessesLeft">10</span></p>
+		<div class="jumbotron">
+ 			<h1 style="color:white">Welcome!</h1>
+  			<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="setUpPuzzle()">Start</a></p>
+		</div>
+		<div class="row col-md-6">
+			<div id="hangmanGame">		
+				<div class="alert alert-success" role="alert"><p>Wins: <span id="wins">0</span></p></div>
+				<div class="alert alert-danger" role="alert"><p>Losses: <span id="losses">0</span></p></div>
+				<div class="alert alert-warning" role="alert"><p>Guesses Left: <span id="guessesLeft">10</span></p></div>
+				<div class="alert alert-info" role="alert"><p>Letters Guessed: <span id="userGuesses">0</span></p></div>
+				
+			</div>
+		</div>
+		<div class="row col-md-6">
 			<p style="font-size: 26px">Puzzle: <span id="puzzle"> </span></p>
 		</div>
 	</body>

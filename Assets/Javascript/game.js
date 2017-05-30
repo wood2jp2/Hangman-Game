@@ -1,8 +1,6 @@
 var wins = 0;
 var losses = 0;
 
-document.onclick = setUpPuzzle
-
 document.onkeyup = function(event) {
 	var userGuess = event.key;
 	lettersGuessed.push(userGuess);
@@ -21,7 +19,7 @@ document.onkeyup = function(event) {
 		for (k; k<solverArray.length; k++) {
 			if (solverArray[k] !== "_") {
 				if (k===solverArray.length-1 && solverArray[solverArray.length-1] !== "_") {
-					alert("You win!");
+					alert("You win! Click the start button to keep your streak up!");
 					wins++;
 				}
 			} else {
@@ -32,7 +30,7 @@ document.onkeyup = function(event) {
 	guessesLeft-=1;
 
 	if (guessesLeft===0) {
-		alert("You lose! Reload the page and try again!");
+		alert("You lose! Click the start button and try again!");
 		losses++;
 	}
 
