@@ -4,12 +4,14 @@
 		<title>Hangman Game</title>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
 		<script type="text/javascript" src="Assets/Javascript/game.js"></script>
 	</head>
 	<body>
 		<div class="jumbotron">
  			<h1 style="color:white">Welcome!</h1>
-  			<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="setUpPuzzle()">Start</a></p>
+  			<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="setUpPuzzle ()">Start a puzzle!</a></p>
+  			<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="giveHint ()">Need a Hint?</a></p>
 		</div>
 		<div class="row col-md-6">
 			<div id="hangmanGame">		
@@ -20,8 +22,9 @@
 				
 			</div>
 		</div>
-		<div class="row col-md-6">
+		<div class="row col-md-6 puzzleHintBox">
 			<p style="font-size: 26px">Puzzle: <span id="puzzle"> </span></p>
+			<p style="font-size: 26px">Hint: <span id="hint"> </span></p>
 		</div>
 	</body>
 </html>

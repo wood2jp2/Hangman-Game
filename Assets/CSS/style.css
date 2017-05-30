@@ -7,4 +7,12 @@
 
 body {
 	background-color: #C5A5FC;
+	font-size: 22px;
+	font-family: 'Economica', sans-serif;
+}
+
+.puzzleHintBox {
+	background-color: white;
+	margin-left: 10px;
+	height: 310px;
 }

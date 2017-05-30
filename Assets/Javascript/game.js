@@ -44,9 +44,10 @@ document.onkeyup = function(event) {
 function setUpPuzzle () {
 	guessesLeft = 10;
 	lettersGuessed = [];
-	arrayOfPuzzles = ["bitcoin", "whatsapp", "google", "facebook", "amazon", "techcrunch", "twitter", "startup", "fullstack"]
+	arrayOfPuzzles = ["bitcoin", "whatsapp", "google", "facebook", "amazon", "techcrunch", "twitter", "startup", "fullstack", "panopto"]
 	puzzleChoice = arrayOfPuzzles[Math.floor(Math.random()*arrayOfPuzzles.length)];
 	solverArray = [];
+	hint = [];
 
 	for (var solverCounter = 0; solverCounter<puzzleChoice.length; solverCounter++) {
 		if (solverArray.length < puzzleChoice.length) {
@@ -57,4 +58,31 @@ function setUpPuzzle () {
 	document.getElementById("puzzle").innerHTML = solverArray;
 	document.getElementById("userGuesses").innerHTML = lettersGuessed;
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
+    document.getElementById("hint").innerHTML = hint;
 }
+
+function giveHint () {
+	if (puzzleChoice) {
+		if (puzzleChoice==="bitcoin") {
+			document.getElementById("hint").innerHTML = "a famous cryptocurrency";
+		} else if (puzzleChoice==="whatsapp") {
+			document.getElementById("hint").innerHTML = "famous international chat method";
+		} else if (puzzleChoice==="google") {
+			document.getElementById("hint").innerHTML = "your favorite search engine, also a verb";
+		} else if (puzzleChoice==="facebook") {
+			document.getElementById("hint").innerHTML = "Zuckerberg";
+		} else if (puzzleChoice==="amazon") {
+			document.getElementById("hint").innerHTML = "BEZOS";
+		} else if (puzzleChoice==="techcrunch") {
+			document.getElementById("hint").innerHTML = "site featuring news about SC startups and corporations";
+		} else if (puzzleChoice==="twitter") {
+			document.getElementById("hint").innerHTML = "logo is a #LittleBlueBird";
+		} else if (puzzleChoice==="startup") {
+			document.getElementById("hint").innerHTML = "buzzword for a small new tech company";
+		} else if (puzzleChoice==="fullstack") {
+			document.getElementById("hint").innerHTML = "front AND back end (well aren't you talented??)";
+		} else if (puzzleChoice==="panopto") {
+			document.getElementById("hint").innerHTML = "Vinny has trouble with this live-streaming app";
+		}
+	}
+}	
