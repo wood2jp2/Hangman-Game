@@ -16,8 +16,18 @@ body {
 	background-color: white;
 	margin-left: 10px;
 	height: 310px;
+	border-radius: 8px;
 }
 
 .btn {
 	background-color: #C5A5FC;
+	clear: both;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-left: 42%;
+	top: 80px;
+}
+
+h1 {
+	margin-top: 10px;
 }
